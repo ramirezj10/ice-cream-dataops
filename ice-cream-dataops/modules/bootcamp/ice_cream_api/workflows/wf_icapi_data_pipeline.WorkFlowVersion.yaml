@@ -19,6 +19,7 @@ workflowDefinition:
       transformation:
         externalId: contextualize_ts_assets
         concurrencyPolicy: fail
+    name: 'Task Two'
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
@@ -31,6 +32,7 @@ workflowDefinition:
       function:
         externalId: icapi_datapoints_extractor
         data: { "hours": 1 }
+    name: 'Task Three'
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
@@ -42,6 +44,7 @@ workflowDefinition:
     parameters:
       function:
         externalId: oee_timeseries
+    name: 'Task Four'
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
